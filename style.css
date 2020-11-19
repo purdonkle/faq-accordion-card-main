@@ -1,0 +1,36 @@
+/* Adam Purdon */
+
+/* Kumbh Sans 400, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+	/* primary text colors */
+	--primary-dark-blue: hsl(238, 29%, 16%);
+	--primary-soft-red: hsl(14, 88%, 65%);
+
+	/* neutral text colors */
+	--neutral-verydark-grayblue: hsl(237, 12%, 33%);
+	--neutral-dark-grayblue: hsl(240, 6%, 50%);
+
+	/* background gradients */
+	--bg-soft-violet: hsl(273, 75%, 66%);
+	--bg-soft-blue: hsl(240, 73%, 65%);
+
+	/* dividers */
+	--divider-grayblue: hsl(240, 5%, 91%);
+}
+
+* {
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(to bottom, var(--bg-soft-violet), var(--bg-soft-blue));
+	background-repeat: no-repeat;
+	width: 100vw;
+	min-height: 100vh;
+}
