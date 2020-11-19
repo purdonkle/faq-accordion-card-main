@@ -1,68 +1,94 @@
 /* Adam Purdon */
 
 /* Kumbh Sans 400, 700 */
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 :root {
-	--white: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 98%);
 
-	/* primary text colors */
-	--primary-dark-blue: hsl(238, 29%, 16%);
-	--primary-soft-red: hsl(14, 88%, 65%);
+  /* primary text colors */
+  --primary-dark-blue: hsl(238, 29%, 16%);
+  --primary-soft-red: hsl(14, 88%, 65%);
 
-	/* neutral text colors */
-	--neutral-verydark-grayblue: hsl(237, 12%, 33%);
-	--neutral-dark-grayblue: hsl(240, 6%, 50%);
+  /* neutral text colors */
+  --neutral-verydark-grayblue: hsl(237, 12%, 33%);
+  --neutral-dark-grayblue: hsl(240, 6%, 50%);
 
-	/* background gradients */
-	--bg-soft-violet: hsl(273, 75%, 66%);
-	--bg-soft-blue: hsl(240, 73%, 65%);
+  /* background gradients */
+  --bg-soft-violet: hsl(273, 75%, 66%);
+  --bg-soft-blue: hsl(240, 73%, 65%);
 
-	/* dividers */
-	--divider-grayblue: hsl(240, 5%, 91%);
+  /* dividers */
+  --divider-grayblue: hsl(240, 5%, 91%);
 }
 
 * {
-	font-family: 'Kumbh Sans', sans-serif;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	background: linear-gradient(to bottom, var(--bg-soft-violet), var(--bg-soft-blue));
-	background-repeat: no-repeat;
-	min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-soft-violet),
+    var(--bg-soft-blue)
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: auto;
-	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
 }
 
 .faq-card {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 875px;
-	height: 475px;
-	background-color: var(--white);
-	border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 875px;
+  height: 475px;
+  background-color: var(--white);
+  border-radius: 25px;
 }
 
 .illus-section {
-	width: 50%;
+	position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.illus-bg {
+	background: url(./images/illustration-woman-online-desktop.svg), url(./images/bg-pattern-desktop.svg);
+	width: 100%;
 	height: 100%;
+	background-size: 100%, 200%;
+	background-repeat: no-repeat, no-repeat;
+	background-position: -75px 70px, -510px -270px;
+}
+
+.illus-block {
+	position: absolute;
+	left: -20%;
+	top: 38%;
 }
 
 .faq-section {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	top: 50%;
-	width: 50%;
-	height: 100%
+  width: 50%;
+  height: 100%;
+  position: relative;
+  top: 15%;
+}
+
+.faq-section h1 {
+	margin-bottom: 35px;
+}
+
+summary {
+  outline: none;
 }
