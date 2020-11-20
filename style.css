@@ -89,6 +89,51 @@ body {
 	margin-bottom: 35px;
 }
 
+.faq {
+	width: 80%;
+}
+
+details {
+	color: var(--neutral-dark-grayblue);
+}
+
+details summary {
+	font-size: 14px;
+	margin: 15px 0px;
+}
+
+details[open] summary {
+	color: var(--primary-dark-blue);
+	font-weight: 700;
+}
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+details summary::before {
+	content: url(./images/icon-arrow-down.svg);
+	float: right;
+	margin-right: 15px;
+}
+
+details[open] summary::before {
+	content: url(./images/icon-arrow-down.svg);
+	transform: rotate(180deg);
+	float: right;
+	margin-right: 15px;
+}
+
+.faq-content {
+	margin-bottom: 15px;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.divide {
+	border-top: 1px solid var(--divider-grayblue);
+}
+
 summary {
   outline: none;
 }
