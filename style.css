@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 :root {
+  /* off white */
   --white: hsl(0, 0%, 98%);
 
   /* primary text colors */
@@ -39,6 +40,8 @@ body {
   min-height: 100vh;
 }
 
+/* faq card position */
+
 .container {
   display: flex;
   justify-content: center;
@@ -51,89 +54,142 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 875px;
-  height: 475px;
+  width: 325px;
+  height: 550px;
   background-color: var(--white);
   border-radius: 25px;
-}
-
-.illus-section {
-	position: relative;
-  width: 50%;
-  height: 100%;
-}
-
-.illus-bg {
-	background: url(./images/illustration-woman-online-desktop.svg), url(./images/bg-pattern-desktop.svg);
-	width: 100%;
-	height: 100%;
-	background-size: 100%, 200%;
-	background-repeat: no-repeat, no-repeat;
-	background-position: -75px 70px, -510px -270px;
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.35);
 }
 
 .illus-block {
-	position: absolute;
-	left: -20%;
-	top: 38%;
+  display: none;
+}
+
+.illus-woman {
+  display: block;
+  position: absolute;
+  left: -10px;
+  top: -20%;
+}
+
+.illus-bg-mobile {
+  background: url(./images/bg-pattern-mobile.svg);
+  width: 100%;
+  height: 150px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .faq-section {
-  width: 50%;
-  height: 100%;
   position: relative;
-  top: 15%;
+  width: 85%;
+  height: 100%;
 }
 
 .faq-section h1 {
-	margin-bottom: 35px;
-}
-
-.faq {
-	width: 80%;
+  margin-bottom: 35px;
+  text-align: center;
 }
 
 details {
-	color: var(--neutral-dark-grayblue);
+  color: var(--neutral-dark-grayblue);
 }
 
 details summary {
-	font-size: 14px;
-	margin: 15px 0px;
+  font-size: 14px;
+  margin: 15px 0px;
+  outline: none;
 }
 
 details[open] summary {
-	color: var(--primary-dark-blue);
-	font-weight: 700;
+  color: var(--primary-dark-blue);
+  font-weight: 700;
 }
 
 details summary::-webkit-details-marker {
-  display:none;
+	display: none;
+	cursor: pointer;
+}
+
+details summary {
+	list-style-type: none;
+	cursor: pointer;
 }
 
 details summary::before {
-	content: url(./images/icon-arrow-down.svg);
-	float: right;
-	margin-right: 15px;
+  content: url(./images/icon-arrow-down.svg);
+  float: right;
 }
 
 details[open] summary::before {
-	content: url(./images/icon-arrow-down.svg);
-	transform: rotate(180deg);
-	float: right;
-	margin-right: 15px;
+  content: url(./images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+  float: right;
 }
 
 .faq-content {
-	margin-bottom: 15px;
-	font-size: 12px;
-	line-height: 20px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .divide {
-	border-top: 1px solid var(--divider-grayblue);
+  border-top: 1px solid var(--divider-grayblue);
 }
 
-summary {
-  outline: none;
+@media only screen and (min-width: 992px) {
+  .faq-card {
+    width: 875px;
+    height: 475px;
+  }
+
+  .faq-section {
+    width: 50%;
+    padding-right: 10%;
+  }
+
+  .illus-section {
+    position: relative;
+    width: 50%;
+    height: 100%;
+  }
+
+  .illus-bg-mobile {
+    height: 0px;
+  }
+
+  .illus-woman {
+    display: none;
+  }
+
+  .illus-bg-desktop {
+    background: url(./images/illustration-woman-online-desktop.svg),
+      url(./images/bg-pattern-desktop.svg);
+    width: 100%;
+    height: 100%;
+    background-size: 100%, 200%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: -75px 70px, -510px -270px;
+  }
+
+  .illus-block {
+    display: block;
+    position: absolute;
+    left: -20%;
+    top: 38%;
+  }
+
+  .faq-section h1 {
+    margin-top: 75px;
+    text-align: left;
+  }
+
+  details summary::before {
+    margin-right: 15px;
+  }
+
+  details[open] summary::before {
+    margin-right: 15px;
+  }
 }
