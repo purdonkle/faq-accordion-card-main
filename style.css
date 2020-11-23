@@ -41,7 +41,7 @@ body {
     var(--bg-soft-blue)
   );
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100vh;overflow: auto;
 }
 
 @keyframes slideDown {
@@ -115,7 +115,6 @@ details {
 
 details[open] {
   max-height: var(--details-height-open, auto);
-
 }
 
 details div {
@@ -162,7 +161,6 @@ details[open] summary::before {
 }
 
 .faq-content {
- 
   font-size: 12px;
   line-height: 20px;
 }

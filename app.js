@@ -2,6 +2,20 @@ window.addEventListener(
   "DOMContentLoaded",
   function () {
     const details = document.querySelectorAll("details");
+
+    // Add the onclick listeners.
+    details.forEach((targetDetail) => {
+      targetDetail.addEventListener("click", () => {
+        // Close all the details that are not targetDetail.
+        details.forEach((detail) => {
+          if (detail !== targetDetail) {
+            detail.removeAttribute("open");
+            detail.classList.remove("is--open")
+          }
+        });
+      });
+    });
+
     details.forEach((detail) => {
       const detailContent = detail.querySelector("div");
       const detailClosedHeight = detail.scrollHeight;
@@ -11,7 +25,7 @@ window.addEventListener(
       detailContent.style.setProperty(
         "--details-content-height-open",
         detailContent.scrollHeight + "px"
-      ); 
+      );
       detail.style.setProperty(
         "--details-height-open",
         detailContent.scrollHeight + detailClosedHeight + "px"
