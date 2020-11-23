@@ -30,6 +30,10 @@
   box-sizing: border-box;
 }
 
+html {
+  --details-transition-time: 200ms;
+}
+
 body {
   background: linear-gradient(
     to bottom,
@@ -38,6 +42,17 @@ body {
   );
   background-repeat: no-repeat;
   min-height: 100vh;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: var(--details-height-open, '100%');
+  }
 }
 
 /* faq card position */
@@ -94,11 +109,29 @@ body {
 
 details {
   color: var(--neutral-dark-grayblue);
+  transition: all ease-out var(--details-transition-time, 0);
+  max-height: var(--details-height-closed, auto);
+}
+
+details[open] {
+  max-height: var(--details-height-open, auto);
+
+}
+
+details div {
+  transition: all ease-out var(--details-transition-time, 0);
+  max-height: var(--details-content-height-closed, auto);
+  overflow: hidden;
+  animation-name: slideDown;
+  animation-duration: var(--details-transition-time);
+}
+
+details.is--open div {
+  max-height: var(--details-content-height-open, auto);
 }
 
 details summary {
   font-size: 14px;
-  margin: 15px 0px;
   outline: none;
 }
 
@@ -129,12 +162,13 @@ details[open] summary::before {
 }
 
 .faq-content {
-  margin-bottom: 15px;
+ 
   font-size: 12px;
   line-height: 20px;
 }
 
 .divide {
+  margin: 15px 0px;
   border-top: 1px solid var(--divider-grayblue);
 }
 
