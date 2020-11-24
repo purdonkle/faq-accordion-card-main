@@ -152,7 +152,6 @@ details summary::-webkit-details-marker {
 
 details summary {
 	list-style-type: none;
-	cursor: pointer;
 }
 
 details summary::before {
@@ -241,5 +240,9 @@ details[open] summary::before {
 
   details[open] summary::before {
     margin-right: 15px;
+  }
+
+  details summary {
+    cursor: pointer;
   }
 }
