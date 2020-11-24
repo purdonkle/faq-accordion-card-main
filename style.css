@@ -44,6 +44,7 @@ body {
   min-height: 100vh;overflow: auto;
 }
 
+/* ffaq transition */
 @keyframes slideDown {
   0% {
     opacity: 0;
@@ -76,6 +77,8 @@ body {
   box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.35);
 }
 
+/* illustration section mobile */
+
 .illus-block {
   display: none;
 }
@@ -95,6 +98,8 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
 }
+
+/* faq section content mobile */
 
 .faq-section {
   position: relative;
@@ -170,16 +175,11 @@ details[open] summary::before {
   border-top: 1px solid var(--divider-grayblue);
 }
 
-@media only screen and (min-width: 992px) {
-  .faq-card {
-    width: 875px;
-    height: 475px;
-  }
+/* screen width above 992px */
 
-  .faq-section {
-    width: 50%;
-    padding-right: 10%;
-  }
+@media only screen and (min-width: 992px) {
+
+  /* illustration section desktop */
 
   .illus-section {
     position: relative;
@@ -210,6 +210,18 @@ details[open] summary::before {
     position: absolute;
     left: -20%;
     top: 38%;
+  }
+
+  /* faq section content */
+
+  .faq-card {
+    width: 875px;
+    height: 475px;
+  }
+
+  .faq-section {
+    width: 50%;
+    padding-right: 10%;
   }
 
   .faq-section h1 {
